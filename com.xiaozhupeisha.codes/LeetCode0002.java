@@ -54,7 +54,7 @@ public class LeetCode0002 {
 
       // 相加结束后，构建新的链表的本个节点
       p.next = new ListNode(addResult);
-      // 移动指针到新的节点，老的节点以及在dummy里面了
+      // 移动指针到新的节点，老的节点已经在dummy里面了
       p = p.next;
     }
     return dummy.next;
