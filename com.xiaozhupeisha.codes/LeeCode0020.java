@@ -31,5 +31,4 @@ public class LeeCode0020 {
     if (c == ')') return '(';
     return '[';
   }
-
 }
