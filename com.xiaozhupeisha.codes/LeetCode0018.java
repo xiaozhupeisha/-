@@ -2,14 +2,20 @@ import java.util.*;
 import java.util.stream.Collectors;
 
 /**
- * 给你一个包含 n 个整数的数组 nums，判断 nums 中是否存在三个元素 a，b，c ，
- * 使得 a + b + c = 0 ？请你找出所有和为 0 且不重复的三元组。
+ * 给你一个由 n 个整数组成的数组 nums ，和一个目标值 target 。请你找出并返回满足下述全部条件且不重复的四元组 [nums[a], nums[b], nums[c], nums[d]] （若两个四元组元素一一对应，则认为两个四元组重复）：
+ * 0 <= a, b, c, d < n
+ * a、b、c 和 d 互不相同
+ * nums[a] + nums[b] + nums[c] + nums[d] == target
+ * 你可以按 任意顺序 返回答案 。
  */
-public class LeetCode0015 {
+public class LeetCode0018 {
 
-  public List<List<Integer>> threeSum(int[] nums) {
+  public List<List<Integer>> fourSum(int[] nums, int target) {
+    if(nums.length < 4){
+      return new ArrayList<>();
+    }
     Arrays.sort(nums);
-    Set<List<Integer>> lists = numSum(nums, 3, 0, 0);
+    Set<List<Integer>> lists = numSum(nums, 4, 0, target);
     List<List<Integer>> newLists = new ArrayList<>();
     newLists.addAll(lists);
     return newLists;
@@ -24,7 +30,7 @@ public class LeetCode0015 {
    * @param target
    * @return
    */
-  public Set<List<Integer>> numSum(int[] nums, int numbers, int point, int target) {
+  public Set<List<Integer>> numSum(int[] nums, int numbers, int point, long target) {
     Set<List<Integer>> results = new HashSet<>();
     // 如果数组里面没有值，或者说只有1个值，那么就只能直接返回了
     // 如果说要求的数字数量的值超出了数组的界限，则直接返回，不管了
@@ -58,7 +64,7 @@ public class LeetCode0015 {
    * @param target
    * @return
    */
-  private static Set<List<Integer>> twosum(int[] nums, int point, int target) {
+  private static Set<List<Integer>> twosum(int[] nums, int point, long target) {
     Set<List<Integer>> results = new HashSet<>();
     // 转化为2sum的问题，使用双指针
     int l = point, r = nums.length - 1;
@@ -81,12 +87,9 @@ public class LeetCode0015 {
   }
 
   public static void main(String[] args) {
-//    解答失败: 测试用例:[-1,0,1,2,-1,-4,-2,-3,3,0,4]
-//    测试结果:[[0,4,-4],[1,3,-4],[-1,4,-3],[0,3,-3],[1,2,-3],         ,[0,2,-2],[-1,2,-1],[0,1,-1]]
-//    期望结果:[[-4,0,4],[-4,1,3],[-3,-1,4],[-3,0,3],[-3,1,2],[-2,-1,3],[-2,0,2],[-1,-1,2],[-1,0,1]]
-    List<List<Integer>> x = new LeetCode0015().threeSum(new int[]{
-            -1, 0, 1, 2, -1, -4, -2, -3, 3, 0, 4
-    });
+    List<List<Integer>> x = new LeetCode0018().fourSum(new int[]{
+            1000000000,1000000000,1000000000,1000000000
+    }, -294967296);
     System.out.println(x);
   }
 }
