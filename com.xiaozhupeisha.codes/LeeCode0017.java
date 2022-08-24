@@ -48,7 +48,6 @@ public class LeeCode0017 {
     for (int i = 0; i < letter.length(); i++) {
       System.out.println("开始回溯,digits=" + digits + ",index=" + (index + 1) + ",indexStr=" + indexStr + letter.charAt(i));
       findCombination(digits, index + 1, indexStr + letter.charAt(i));
-      System.out.println("============================================");
     }
 
   }
