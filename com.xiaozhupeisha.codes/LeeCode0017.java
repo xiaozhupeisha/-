@@ -6,8 +6,50 @@ import java.util.stream.Collectors;
  */
 public class LeeCode0017 {
 
+  private String letterMap[] = {
+          " ",    //0
+          "",     //1
+          "abc",  //2
+          "def",  //3
+          "ghi",  //4
+          "jkl",  //5
+          "mno",  //6
+          "pqrs", //7
+          "tuv",  //8
+          "wxyz"  //9
+  };
+
+  private ArrayList<String> res;
+
   public List<String> letterCombinations(String digits) {
-    return new ArrayList<>();
+
+    res = new ArrayList<String>();
+    if (digits.equals(""))
+      return res;
+
+    findCombination(digits, 0, "");
+    return res;
+  }
+
+  private void findCombination(String digits, int index, String s) {
+
+    // 2 == 23.length
+    if (index == digits.length()) {
+      res.add(s);// "ad"
+      return;
+    }
+
+    char c = digits.charAt(index);// 2 -> 3
+    String letters = letterMap[c - '0'];// abc -> def
+    for (int i = 0; i < letters.length(); i++) {
+      // findCombination(23, 1, "" + a);
+      //
+      // findCombination(23, 2, a + d);
+      // return ad
+      findCombination(digits, index + 1, s + letters.charAt(i));
+    }
+
+    return;
   }
 
   public static void main(String[] args) {
