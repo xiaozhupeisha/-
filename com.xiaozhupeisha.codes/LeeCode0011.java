@@ -3,7 +3,7 @@
  * 找出其中的两条线，使得它们与 x 轴共同构成的容器可以容纳最多的水。
  * 返回容器可以储存的最大水量。
  */
-public class LeetCode0011 {
+public class LeeCode0011 {
 
   /**
    * s 和 p 相互匹配的过程大致是，两个指针 i, j 分别在 s 和 p 上移动，如果最后两个指针都能移动到字符串的末尾，那么就匹配成功，反之则匹配失败。
@@ -33,6 +33,6 @@ public class LeetCode0011 {
   }
 
   public static void main(String[] args) {
-    System.out.println(new LeetCode0011().maxArea(new int[]{1, 8, 6, 2, 5, 4, 8, 3, 7}));
+    System.out.println(new LeeCode0011().maxArea(new int[]{1, 8, 6, 2, 5, 4, 8, 3, 7}));
   }
 }

@@ -1,7 +1,7 @@
 /**
  * 给你一个字符串 s，找到 s 中最长的回文子串。
  */
-public class LeetCode0005 {
+public class LeeCode0005 {
 
   public String longestPalindrome(String s) {
     String result = "";
@@ -31,7 +31,7 @@ public class LeetCode0005 {
 
   public static void main(String[] args) {
     String test = "babad";
-    String s = new LeetCode0005().longestPalindrome(test);
+    String s = new LeeCode0005().longestPalindrome(test);
     System.out.println(s);
   }
 }

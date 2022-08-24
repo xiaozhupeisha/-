@@ -3,7 +3,7 @@
  * '.' 匹配任意单个字符
  * '*' 匹配零个或多个前面的那一个元素
  */
-public class LeetCode0010 {
+public class LeeCode0010 {
 
   /**
    * s 和 p 相互匹配的过程大致是，两个指针 i, j 分别在 s 和 p 上移动，如果最后两个指针都能移动到字符串的末尾，那么就匹配成功，反之则匹配失败。
@@ -19,6 +19,6 @@ public class LeetCode0010 {
   }
 
   public static void main(String[] args) {
-    System.out.println(new LeetCode0010().isMatch("aaa", "a*"));
+    System.out.println(new LeeCode0010().isMatch("aaa", "a*"));
   }
 }

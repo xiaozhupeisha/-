@@ -5,7 +5,7 @@ import java.util.stream.Collectors;
  * 给你一个包含 n 个整数的数组 nums，判断 nums 中是否存在三个元素 a，b，c ，
  * 使得 a + b + c = 0 ？请你找出所有和为 0 且不重复的三元组。
  */
-public class LeetCode0015 {
+public class LeeCode0015 {
 
   public List<List<Integer>> threeSum(int[] nums) {
     Arrays.sort(nums);
@@ -84,7 +84,7 @@ public class LeetCode0015 {
 //    解答失败: 测试用例:[-1,0,1,2,-1,-4,-2,-3,3,0,4]
 //    测试结果:[[0,4,-4],[1,3,-4],[-1,4,-3],[0,3,-3],[1,2,-3],         ,[0,2,-2],[-1,2,-1],[0,1,-1]]
 //    期望结果:[[-4,0,4],[-4,1,3],[-3,-1,4],[-3,0,3],[-3,1,2],[-2,-1,3],[-2,0,2],[-1,-1,2],[-1,0,1]]
-    List<List<Integer>> x = new LeetCode0015().threeSum(new int[]{
+    List<List<Integer>> x = new LeeCode0015().threeSum(new int[]{
             -1, 0, 1, 2, -1, -4, -2, -3, 3, 0, 4
     });
     System.out.println(x);

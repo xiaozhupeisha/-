@@ -3,7 +3,7 @@ import java.util.LinkedHashMap;
 /**
  * 给定一个字符串 s ，请你找出其中不含有重复字符的 最长子串 的长度。
  */
-public class LeetCode0003 {
+public class LeeCode0003 {
 
   public int lengthOfLongestSubstring(String s) {
     // 处理边界情况
@@ -47,7 +47,7 @@ public class LeetCode0003 {
   }
 
   public static void main(String[] args) {
-    int i = new LeetCode0003().lengthOfLongestSubstring("tmmzuxt");
+    int i = new LeeCode0003().lengthOfLongestSubstring("tmmzuxt");
     System.out.println(i);
   }
 }

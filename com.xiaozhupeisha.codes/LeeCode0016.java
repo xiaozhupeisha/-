@@ -6,7 +6,7 @@ import java.util.stream.Collectors;
  * 返回这三个数的和。
  * 假定每组输入只存在恰好一个解。
  */
-public class LeetCode0016 {
+public class LeeCode0016 {
 
   public int threeSumClosest(int[] nums, int target) {
     Arrays.sort(nums);
@@ -52,7 +52,7 @@ public class LeetCode0016 {
   }
 
   public static void main(String[] args) {
-    int i = new LeetCode0016().threeSumClosest(new int[]{-1, 2, 1, -4}, 1);
+    int i = new LeeCode0016().threeSumClosest(new int[]{-1, 2, 1, -4}, 1);
     System.out.println(i);
   }
 }

@@ -4,7 +4,7 @@ import java.util.LinkedList;
  * 编写一个函数来查找字符串数组中的最长公共前缀。
  * 如果不存在公共前缀，返回空字符串 ""。
  */
-public class LeetCode0014 {
+public class LeeCode0014 {
 
   public String longestCommonPrefix(String[] strs) {
     if(strs.length == 1){
@@ -40,7 +40,7 @@ public class LeetCode0014 {
   }
 
   public static void main(String[] args) {
-    System.out.println(new LeetCode0014().longestCommonPrefix(new String[]{
+    System.out.println(new LeeCode0014().longestCommonPrefix(new String[]{
             "flower","flower","flower","flower"
     }));
   }

@@ -17,7 +17,7 @@ import java.util.LinkedList;
  * C 可以放在 D (500) 和 M (1000) 的左边，来表示 400 和 900。
  * 给你一个罗马数字，将其转为整数。
  */
-public class LeetCode0013 {
+public class LeeCode0013 {
 
   public int romanToInt(String roman) {
     int[] values = {1000, 500, 100, 50, 10, 5, 1};
@@ -58,6 +58,6 @@ public class LeetCode0013 {
   }
 
   public static void main(String[] args) {
-    System.out.println(new LeetCode0013().romanToInt("MCMXCIV"));
+    System.out.println(new LeeCode0013().romanToInt("MCMXCIV"));
   }
 }

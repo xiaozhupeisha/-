@@ -1,7 +1,7 @@
 /**
  * 给你一个整数 x ，如果 x 是一个回文整数，返回 true ；否则，返回 false 。
  */
-public class LeetCode0009 {
+public class LeeCode0009 {
 
   public boolean isPalindrome(int x) {
     if(x < 0){
@@ -24,6 +24,6 @@ public class LeetCode0009 {
   }
 
   public static void main(String[] args) {
-    System.out.println(new LeetCode0009().isPalindrome(1));
+    System.out.println(new LeeCode0009().isPalindrome(1));
   }
 }

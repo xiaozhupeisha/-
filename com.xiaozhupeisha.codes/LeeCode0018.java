@@ -8,7 +8,7 @@ import java.util.stream.Collectors;
  * nums[a] + nums[b] + nums[c] + nums[d] == target
  * 你可以按 任意顺序 返回答案 。
  */
-public class LeetCode0018 {
+public class LeeCode0018 {
 
   public List<List<Integer>> fourSum(int[] nums, int target) {
     if(nums.length < 4){
@@ -87,7 +87,7 @@ public class LeetCode0018 {
   }
 
   public static void main(String[] args) {
-    List<List<Integer>> x = new LeetCode0018().fourSum(new int[]{
+    List<List<Integer>> x = new LeeCode0018().fourSum(new int[]{
             1000000000,1000000000,1000000000,1000000000
     }, -294967296);
     System.out.println(x);

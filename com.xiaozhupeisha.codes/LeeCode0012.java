@@ -15,7 +15,7 @@
  * C 可以放在 D (500) 和 M (1000) 的左边，来表示 400 和 900。
  * 给你一个整数，将其转为罗马数字。
  */
-public class LeetCode0012 {
+public class LeeCode0012 {
 
   public String intToRoman(int num) {
     int[] values = {1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1};
@@ -42,6 +42,6 @@ public class LeetCode0012 {
   }
 
   public static void main(String[] args) {
-    System.out.println(new LeetCode0012().intToRoman(1994));
+    System.out.println(new LeeCode0012().intToRoman(1994));
   }
 }

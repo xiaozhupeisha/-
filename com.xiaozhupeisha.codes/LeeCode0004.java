@@ -4,7 +4,7 @@ import java.util.LinkedList;
  * 给定两个大小分别为 m 和 n 的正序（从小到大）数组 nums1 和 nums2。请你找出并返回这两个正序数组的 中位数 。
  * 算法的时间复杂度应该为 O(log (m+n)) 。
  */
-public class LeetCode0004 {
+public class LeeCode0004 {
 
   public double findMedianSortedArrays(int[] nums1, int[] nums2) {
     // 定义2个指针，分别扫描nums1和nums2
@@ -51,7 +51,7 @@ public class LeetCode0004 {
   }
 
   public static void main(String[] args) {
-    double medianSortedArrays = new LeetCode0004().findMedianSortedArrays(
+    double medianSortedArrays = new LeeCode0004().findMedianSortedArrays(
             new int[]{1, 4, 6},
             new int[]{2, 3, 5}
     );
