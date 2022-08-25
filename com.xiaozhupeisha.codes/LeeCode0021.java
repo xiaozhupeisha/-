@@ -40,6 +40,8 @@ public class LeeCode0021 {
         p.next = p2;
         p2 = p2.next;
       }
+      // p指针是需要移动的
+      p = p.next;
     }
 
     // 如果2个链表长度不等，则把没拉链完的给他补充到后面
