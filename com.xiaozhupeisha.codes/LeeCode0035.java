@@ -12,6 +12,7 @@ public class LeeCode0035 {
     int r = nums.length;
     while (l < r) {
       System.out.println("=====================");
+
       System.out.println("l=" + l + ",r=" + r);
       int mid = l + (r - l) / 2;
       System.out.println("mid=" + mid);
