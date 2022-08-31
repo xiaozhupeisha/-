@@ -58,7 +58,6 @@ public class LeeCode0040 {
       for (Integer integer : list) {
         System.out.println(integer);
       }
-      System.out.println("结果end");
     }
   }
 }
