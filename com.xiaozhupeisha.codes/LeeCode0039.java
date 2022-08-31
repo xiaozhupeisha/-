@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
 /**
@@ -22,9 +23,35 @@ import java.util.List;
  * 仅有这两种组合。
  */
 public class LeeCode0039 {
-  public List<List<Integer>> combinationSum(int[] candidates, int target) {
+  LinkedList<List<Integer>> result = new LinkedList<>();
+  LinkedList<Integer> track = new LinkedList<>();
+  int trackSum = 0;
 
-    return new ArrayList<>();
+  public void backtrack(int[] nums, int start, int target) {
+    if (trackSum == target) {
+      result.add(new LinkedList<>(track));
+      return;
+    }
+    if (trackSum > target) {
+      return;
+    }
+    for (int i = start; i < nums.length; i++) {
+      trackSum += nums[i];
+      track.add(nums[i]);
+
+      backtrack(nums, i, target);
+
+      trackSum -= nums[i];
+      track.removeLast();
+    }
+  }
+
+  public List<List<Integer>> combinationSum(int[] candidates, int target) {
+    if (candidates.length == 0) {
+      return result;
+    }
+    backtrack(candidates, 0, target);
+    return result;
   }
 
   public static void main(String[] args) {
