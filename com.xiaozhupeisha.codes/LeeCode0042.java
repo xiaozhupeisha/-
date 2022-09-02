@@ -31,15 +31,21 @@ public class LeeCode0042 {
     // 定义指针=1，从左到右移动，每次都对比i和i-1当中，最大的一根柱子
     for (int i = 1; i < length; i++) {
       l_nums[i] = Math.max(height[i], l_nums[i - 1]);
+      System.out.println("l_nums[" + i + "]=" + l_nums[i]);
     }
     // 定义指针=n-2，从右到左移动，每次都对比i和i+1当中，最大的一根柱子
     for (int i = length - 2; i >= 0; i--) {
       r_nums[i] = Math.max(height[i], r_nums[i + 1]);
+      System.out.println("r_nums[" + i + "]=" + r_nums[i]);
     }
     // 定义指针=1，从左到右移动，每次都对比左数组和右数组中较小的能接住雨水的值，然后减去当前i的高度，就是当前i能接住的雨水
     for (int i = 1; i < length - 1; i++) {
       result += Math.min(l_nums[i], r_nums[i]) - height[i];
     }
     return result;
+  }
+
+  public static void main(String[] args) {
+    new LeeCode0042().trap(new int[]{0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1});
   }
 }
