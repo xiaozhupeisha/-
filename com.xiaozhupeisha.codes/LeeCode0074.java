@@ -9,7 +9,7 @@ public class LeeCode0074 {
     int row = matrix.length;
     int col = matrix[0].length;
 
-    boolean has = false;
+    boolean has = Boolean.FALSE;
     for (int r = 0; r < row; r++) {
       if (r < row - 1 && matrix[r + 1][0] < target) {
         continue;
