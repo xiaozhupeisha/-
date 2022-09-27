@@ -22,40 +22,39 @@ public class LeeCode0092 {
 
   public ListNode init() {
     ListNode listNode = new ListNode(1);
-    listNode.next = new ListNode(4);
+    listNode.next = new ListNode(2);
     listNode.next.next = new ListNode(3);
-    listNode.next.next.next = new ListNode(2);
+    listNode.next.next.next = new ListNode(4);
     listNode.next.next.next.next = new ListNode(5);
-    listNode.next.next.next.next.next = new ListNode(2);
     return listNode;
   }
 
-  public ListNode partition(ListNode head, int x) {
-    ListNode small = new ListNode(-1);
-    ListNode large = new ListNode(-1);
-
-    ListNode smallHead = small;
-    ListNode largeHead = large;
-
-    while (head != null) {
-      if(head.val < x){
-        small.next = head;
-        small = small.next;
-      }else{
-        large.next = head;
-        large = large.next;
-      }
-      head = head.next;
+  public ListNode reverseBetween(ListNode head, int left, int right) {
+    if (left == 1) {
+      return reverse(head, right);
     }
-    large.next = null;
-    small.next = largeHead.next;
-    return smallHead.next;
+    head.next = reverseBetween(head.next, left - 1, right - 1);
+    return head;
+  }
+
+  ListNode successor = null;
+
+  ListNode reverse(ListNode head, int n) {
+    // base-case
+    if (n == 1) {
+      successor = head.next;
+      return head;
+    }
+    ListNode last = reverse(head.next, n - 1);
+    head.next.next = head;
+    head.next = successor;
+    return last;
   }
 
   public static void main(String[] args) {
     LeeCode0092 leeCode0086 = new LeeCode0092();
     ListNode init = leeCode0086.init();
-    ListNode partition = leeCode0086.partition(init, 3);
+    ListNode partition = leeCode0086.reverseBetween(init, 2, 4);
     System.out.println(partition);
   }
 
