@@ -19,16 +19,6 @@ public class LeeCode0082 {
     }
   }
 
-  public ListNode init() {
-    ListNode listNode = new ListNode(1);
-    listNode.next = new ListNode(2);
-    listNode.next.next = new ListNode(2);
-    listNode.next.next.next = new ListNode(3);
-    listNode.next.next.next.next = new ListNode(4);
-    listNode.next.next.next.next.next = new ListNode(5);
-    return listNode;
-  }
-
   public ListNode deleteDuplicates(ListNode head) {
     ListNode dummy = new ListNode(-1);
     dummy.next = head;
@@ -47,13 +37,6 @@ public class LeeCode0082 {
       }
     }
     return dummy.next;
-  }
-
-  public static void main(String[] args) {
-    LeeCode0082 leeCode0082 = new LeeCode0082();
-    ListNode init = leeCode0082.init();
-    ListNode listNode = leeCode0082.deleteDuplicates(init);
-    System.out.println(listNode);
   }
 
 }
